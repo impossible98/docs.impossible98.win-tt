@@ -2,6 +2,12 @@
 
 This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
 
+## Mirror
+
+```bash
+yarn config set registry http://mirrors.cloud.tencent.com/npm/
+```
+
 ### Installation
 
 ```
