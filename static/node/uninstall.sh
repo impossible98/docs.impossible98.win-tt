@@ -3,31 +3,33 @@
 uninstall_rpm() {
     sudo yum remove \
         --assumeyes \
-        git
+        nodejs yarn
     sudo yum autoremove --assumeyes
 }
 
 uninstall_deb() {
     sudo apt purge \
         --yes \
-        git
+        nodejs yarnpkg
     sudo apt autoremove --yes
 }
 
 version() {
-    # git version
+    # node version
+    # yarn version
     echo -e "\033[32m"
     echo -e "=============================="
-    echo -e "  Git: v  $(git --version | head -n 1 | awk '{print $5}')"
+    echo -e "  Node.js: v $(node --version | sed 's/^v//')"
+    echo -e "  Yarn:    v $(yarn --version | sed 's/^v//')"
     echo -e "=============================="
     echo -e "\033[0m"
 }
 
 main() {
-    if ! command -v git &> /dev/null; then
+    if ! command -v node &> /dev/null; then
         echo -e "\033[31m"
         echo -e "=============================="
-        echo -e "  Git: not installed"
+        echo -e "  Node.js: not installed"
         echo -e "=============================="
         echo -e "\033[0m"
         exit 1
