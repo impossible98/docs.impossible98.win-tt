@@ -8,17 +8,17 @@ uninstall_rpm() {
 }
 
 uninstall_deb() {
-    sudo apt purge \
+    sudo apt-get purge \
         --yes \
         git
-    sudo apt autoremove --yes
+    sudo apt-get autoremove --yes
 }
 
 version() {
     # git version
     echo -e "\033[32m"
     echo -e "=============================="
-    echo -e "  Git: v  $(git --version | head -n 1 | awk '{print $5}')"
+    echo -e "  Git: v$(git --version | awk '{print $3}')"
     echo -e "=============================="
     echo -e "\033[0m"
 }
@@ -34,12 +34,13 @@ main() {
     else
         version
         if grep -qi "anolis" /etc/os-release; then
+            echo -e "\033[32m  Anolis OS\033[0m"
             uninstall_rpm
         elif grep -qi "debian" /etc/os-release; then
-            echo -e "  Debian"
-            install_deb
+            echo -e "\033[32m  Debian\033[0m"
+            uninstall_deb
         else
-            echo -e "  Unknown OS"
+            echo -e "\033[31m  Unknown OS\033[0m"
             exit 1
         fi
     fi
