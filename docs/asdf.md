@@ -3,24 +3,19 @@
 ## Install asdf
 
 ```bash
-git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.14.0
-sudo tee --append ~/.bashrc <<EOF
-. "$HOME/.asdf/asdf.sh"
-
-EOF
-source ~/.bashrc
+bash -c "$(curl --location https://docs.impossible98.win/asdf/install.sh)"
 ```
 
 ## Uninstall asdf
 
 ```bash
-sudo rm -rf ~/.asdf 
+bash -c "$(curl --location https://docs.impossible98.win/asdf/uninstall.sh)"
 ```
 
 ## Install plugins
 
 ```bash
-asdf plugin add nodejs
+asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
 asdf install nodejs latest
 asdf global nodejs latest
 asdf local nodejs latest
