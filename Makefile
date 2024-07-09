@@ -17,6 +17,12 @@ dev: install
 # 安装环境
 env:
 	asdf install
+# 格式化代码
+fmt:
+	yarn run format
+# 自动修复代码格式
+fix:
+	yarn run format:fix
 # 确保依赖是最新的
 install: version
 ifeq ($(wildcard node_modules),)

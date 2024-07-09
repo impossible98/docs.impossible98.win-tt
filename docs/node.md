@@ -12,7 +12,6 @@ bash -c "$(curl --location https://docs.impossible98.win/node/install.sh)"
 bash -c "$(curl --location https://docs.impossible98.win/node/uninstall.sh)"
 ```
 
-
 ## Configure
 
 ```bash
