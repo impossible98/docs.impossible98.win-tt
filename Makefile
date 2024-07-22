@@ -6,7 +6,7 @@ COLOR_GREEN ?= \033[32;01m
 NODE_VERSION := $(shell node --version | sed 's/^v//')
 YARN_VERSION := $(shell yarn --version)
 # 构建项目
-build: install
+build: install fmt
 	yarn run build
 # 部署项目
 deploy: build

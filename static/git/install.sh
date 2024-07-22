@@ -7,7 +7,6 @@ install_rpm() {
 }
 
 install_deb() {
-    sudo apt-get update --yes
     sudo apt-get install \
         --no-install-recommends \
         --yes \
