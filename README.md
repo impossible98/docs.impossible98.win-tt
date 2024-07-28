@@ -1,12 +1,8 @@
-# Website
+# docs.impossible98.win
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/8bff93f9-6b32-4e8f-8066-8990be567c2f/deploy-status)](https://app.netlify.com/sites/graceful-jelly-ddd38d/deploys)
 
 This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
-
-## Mirror
-
-```bash
-yarn config set registry http://mirrors.cloud.tencent.com/npm/
-```
 
 ### Installation
 

@@ -71,6 +71,11 @@ const config = {
             position: 'left',
             label: 'Tutorial',
           },
+          {
+            href: 'https://github.com/impossible98/docs.impossible98.win',
+            label: 'GitHub',
+            position: 'right',
+          },
         ],
       },
       footer: {
